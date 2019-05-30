@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <!-- <img src="./images/forest.jpg", id = "img"> -->
+
+  <div id="app">
+    <div class="instructions" @click = "updateInstructions">
+      <h1> {{instruction}} <h1>
+      </div>
+
+
+
+      <div class="formater" v-if="gameStarted">
+
+        <div id="scorebar">
+          <h3> moves: {{moves}} </h3>
+        </div>
+
+        <div id="forest" class ="main" >
+          <div v-for="item in textboard" id="text">
+            <h3>{{item}}</h3>
+          </div>
+        </div>
+
+        <div id="userInteration">
+          <input v-on:keyup.enter="submit" v-model="message" id = "inputBox" placeholder="enter one word response">
+          <button v-on:click="displayHint" id = "hint">Hint</button>
+        </div>
+
+      </div>
+
+    </div>
+
+  </body>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.2/dist/vue.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="./script.js"> </script>
+  </html>
