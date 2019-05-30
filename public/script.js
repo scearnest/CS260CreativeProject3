@@ -26,10 +26,6 @@ let app = new Vue({
         const response = await axios.get('https://dictionaryapi.com/api/v3/references/collegiate/json/' + word +'?key=65dcd250-8627-4dc9-b491-b577c7098afb');
         this.wordInfo = (response.data);
 
-
-
-
-
         if(word == "open")
         {
           if(this.door)
@@ -166,7 +162,6 @@ let app = new Vue({
       this.message = '';
     }
   },
-
 
   watch: {
     textboard: function (val) {

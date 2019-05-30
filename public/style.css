@@ -66,10 +66,6 @@ body,html{
 #inputBox{
   width: 99%;
   height: 50%;
-  /* margin-left: 3%;
-  margin-right: 3%; */
-  /* position: absolute; */
-  /* bottom: 0; */
   font-family: monaco, Consolas, "Lucida Console", monospace;
   font-size: 18px;
 }
